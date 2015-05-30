@@ -18,9 +18,12 @@
 	    <link rel="icon" href="assets/images/favicon.ico">
 	</head>
 
-	<body ng-app="simplySocialApp">
+	<body>
 
-  		<div ng-view></div>
+		<div id="appContainer" ng-app="simplySocialApp">
+			<div id-"appViews" ng-view></div>
+		</div>
+  		
 
   		<!-- ANGULAR -->
 		<script src="assets/bower_components/angular/angular.js"></script>
