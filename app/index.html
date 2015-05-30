@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+
+<!--[if gt IE 8]><!--> 
+<html lang="en" class="no-js"> 
+<!--<![endif]-->
+
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <title>Simply Social Code Challenge</title>
+	    <meta charset="utf-8">
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	    <link rel="stylesheet" media="all" href="assets/css/styles.css">
+	    <link rel="icon" href="assets/images/favicon.ico">
+	</head>
+
+	<body ng-app="simplySocialApp">
+
+  		<div ng-view></div>
+
+  		<!-- ANGULAR -->
+		<script src="assets/bower_components/angular/angular.js"></script>
+		<script src="assets/bower_components/angular-route/angular-route.js"></script>
+
+		<!-- BOOTSTRAP || !IMPORTANT must be called in this order: app, routes -->
+		<script src="bootstrap/app.js"></script>
+		<script src="bootstrap/app.routes.js"></script>
+
+		<!-- CORE -->
+
+			<!-- HOME -->
+			<script src="core/home/homeController.js"></script>
+			<script src="core/home/homeDirective.js"></script>
+			<script src="core/home/homeService.js"></script>
+
+			<!-- SETTINGS 
+			<script src="core/settings/settingsController.js"></script>
+			<script src="core/settings/settingsDirective.js"></script>
+			<script src="core/settings/settingsService.js"></script>-->  
+
+		<!-- SHARED -->
+
+	</body>
+</html>
+
+
