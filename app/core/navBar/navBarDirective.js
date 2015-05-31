@@ -4,7 +4,7 @@ simplySocialApp.directive('navBarTemplate', function () {
 	return {
 		restrict: 'EA',
 		templateUrl: function () {
-			return "shared/navBar/navBarView.html"; 
+			return "core/navBar/navBarView.html"; 
 		}
 	}
 })

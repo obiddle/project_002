@@ -4,18 +4,21 @@
 
 body {position:absolute;z-index: 1; height: 100%;width: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-touch-callout: none;-webkit-user-select: none;margin:0;padding:0;overflow-x: hidden;}
 
-
 #appContainer {position: absolute; z-index: 1; top: 0px;left: 0px;height: 100%;width: 100%;overflow: hidden;}
 
 #appViews {position: absolute; z-index: 1; top:0;left:0; height: 100%;width: 100%; .border-box; background-color: #fff; .translate3d(0,0,0);}
 
+// TOUCH EFFECTS
+@import "shared/touchEffects/touchEffects.less";
 
 // NAV BAR
-@import "shared/navBar/navBar.less";
+@import "core/navBar/navBar.less";
 
 // HOME
 @import "core/home/home.less";
 
-// TOUCH EFFECTS
-@import "shared/touchEffects/touchEffects.less";
+// POSTS
+@import "shared/posts/posts.less";
+
+
 

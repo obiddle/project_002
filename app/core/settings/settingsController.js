@@ -1,0 +1,9 @@
+
+
+simplySocialApp.controller('settingsController', [ function ( ) {
+    
+
+
+}]);
+
+
