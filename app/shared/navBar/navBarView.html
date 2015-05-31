@@ -1,15 +1,35 @@
 <div class="navBarContainer" ng-controller="navBarController">
+
 	<div class="navBarLogo">
 		simply<span class="logoGreyFont">social</span>
+		<div class="touchEffectDark" ng-click="changeView('/home')"></div>
 	</div>
+
 	<div class="navBarActionsContainer">
-		<div class="navBarChatButton"> </div>
-		<input class="navBarSearchField" type="text" ng-model="search" autocorrect='on' ng-trim="false" maxlength="20" ng-enter=""></input>
+		<div class="navBarChatButton"> 
+			<div class="touchEffectDark"></div>
+		</div>
+		<input class="navBarSearchField" type="text" ng-model="searchText" autocorrect='on' ng-trim="false" maxlength="20" ng-enter=""></input>
 		<div class="navBarSettingsButton" ng-mouseenter="settingsMenuOpen = true" ng-mouseleave="settingsMenuOpen = false">
 			<div class="navBarUserAvatar" ng-style="setAvatarImage()"></div>
 		</div>
 	</div>
+
 	<div class="navBarSettingsContainer" ng-class="{navBarSettingsContainerActive: settingsMenuOpen}" ng-mouseenter="settingsMenuOpen = true" ng-mouseleave="settingsMenuOpen = false">
+		<div class="navBarSettingsLink">Profile
+			<div class="touchEffectLight"></div>
+		</div>
+		<div class="navBarSettingsLink">Followers
+			<div class="touchEffectLight"></div>
+		</div>
+		<div class="navBarSettingsLink">Following
+			<div class="touchEffectLight"></div>
+		</div>
+		<div class="navBarSettingsLink">Settings
+			<div class="touchEffectLight"></div>
+		</div>
+	</div>
+
 </div>
 
 

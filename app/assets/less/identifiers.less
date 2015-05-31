@@ -6,9 +6,18 @@
 @greyLogoFont: #bec3cc;
 
 // IMAGES
+@globalImages: "../images/global";
 @navBarImages: "../images/navBar";
 
 // CROSS BROWSER MIXINS
+
+.background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .border-box {
 	-webkit-box-sizing: border-box; 
 	   -moz-box-sizing: border-box;   
@@ -31,6 +40,14 @@
 	    -ms-transform: translate3d(@x, @y, @z);
 	     -o-transform: translate3d(@x, @y, @z);
 	        transform: translate3d(@x, @y, @z);
+}
+
+.singleTransition(@string){
+	-webkit-transition: @string;
+	   -moz-transition: @string;
+	    -ms-transition: @string; 
+	     -o-transition: @string; 
+	        transition: @string;
 }
 
 

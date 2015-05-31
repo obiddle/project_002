@@ -1,9 +1,9 @@
 
 
-simplySocialApp.controller('navBarController', ['$scope', 'userAccountService', function ($scope, userAccountService) {
+simplySocialApp.controller('navBarController', ['$scope', '$location', 'userAccountService', function ($scope, $location, userAccountService) {
     
 	function init(){
-		$scope.search = "";
+		$scope.searchText = "";
 		$scope.settingsMenuOpen = false;
 		$scope.userData = userAccountService.getUserData();
 	}
