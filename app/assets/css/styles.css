@@ -1,4 +1,9 @@
-/* CROSS BROWSER MIXINS*/
+.background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .border-box {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9,6 +14,10 @@
 /* FONTS */
 .proximaNova-Regular-font {
   font-family: 'proximaNova-Regular';
+}
+.openSans-Light-font {
+  font-family: 'Open Sans';
+  font-weight: 200;
 }
 /* PROXIMA NOVA */
 @font-face {
@@ -55,15 +64,222 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* HOME VIEW  */
-.homeContainer {
+.navBarContainer {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 2;
+  width: 100%;
+  min-width: 750px;
+  height: 60px;
+  font-family: 'proximaNova-Regular';
+  background-color: #262728;
+}
+.navBarLogo {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 84px;
+  width: 170px;
+  height: 60px;
+  background: url("../images/navBar/logo_icon.png") no-repeat 20px center;
+  background-size: 36px;
+  color: #70767f;
+  text-align: center;
+  line-height: 60px;
+  font-size: 19px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 56px;
+  cursor: pointer;
+}
+.logoGreyFont {
+  color: #bec3cc;
+}
+.navBarActionsContainer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 94px;
+  width: 338px;
+  height: 60px;
+}
+.navBarChatButton {
+  position: absolute;
+  z-index: 1;
+  height: 60px;
+  width: 55px;
+  background: url("../images/navBar/chat_icon.png") no-repeat center;
+  background-size: 35px;
+  cursor: pointer;
+}
+.navBarSearchField {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 65px;
+  height: 30px;
+  width: 200px;
+  padding: 0px 5px 0px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #44474b;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 30px;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-weight: 200;
+  font-size: 14px;
+  background: url("../images/navBar/search_icon.png") no-repeat right center #262728;
+  background-size: 25px;
+  display: block;
+}
+.navBarSettingsButton {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 0;
+  background: url("../images/navBar/down_arrow_icon.png") no-repeat right center;
+  background-size: 11px;
+  height: 60px;
+  width: 65px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.navBarUserAvatar {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  left: 16px;
+  background: no-repeat center;
+  background-size: 100%;
+  height: 30px;
+  width: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.navBarSettingsContainer {
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  right: 86px;
+  width: 98px;
+  height: 128px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f5f7;
+  visibility: hidden;
+}
+.navBarSettingsContainerActive {
+  visibility: visible;
+}
+.navBarSettingsLink {
+  position: relative;
+  line-height: 31px;
+  border-bottom: 1px solid #dee1e5;
+  font-size: 12px;
+  color: #70767f;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 17px;
+}
+.navBarSettingsLink:nth-child(4n+4) {
+  border-bottom: 0px;
+}
+.homeContainer {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  font-family: 'proximaNova-Regular';
+}
+.homeMainContainer {
+  position: relative;
+  width: 100%;
+  height: 422px;
+  background: url("../images/global/main_bg_image.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.homeSendMessageContainer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 557px;
+  height: 156px;
+  background-color: rgba(0, 178, 134, 0.7);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.touchEffectLight {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+.touchEffectLight:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.touchEffectDark {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 39, 40, 0);
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+.touchEffectDark:hover {
+  background-color: rgba(38, 39, 40, 0.5);
 }

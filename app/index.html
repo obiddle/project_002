@@ -21,6 +21,7 @@
 	<body>
 
 		<div id="appContainer" ng-app="simplySocialApp">
+			<nav-bar-template></nav-bar-template>
 			<div id-"appViews" ng-view></div>
 		</div>
   		
@@ -29,23 +30,38 @@
 		<script src="assets/bower_components/angular/angular.js"></script>
 		<script src="assets/bower_components/angular-route/angular-route.js"></script>
 
+
 		<!-- BOOTSTRAP || !IMPORTANT must be called in this order: app, routes -->
 		<script src="bootstrap/app.js"></script>
 		<script src="bootstrap/app.routes.js"></script>
+
 
 		<!-- CORE -->
 
 			<!-- HOME -->
 			<script src="core/home/homeController.js"></script>
-			<script src="core/home/homeDirective.js"></script>
-			<script src="core/home/homeService.js"></script>
+
 
 			<!-- SETTINGS 
 			<script src="core/settings/settingsController.js"></script>
 			<script src="core/settings/settingsDirective.js"></script>
 			<script src="core/settings/settingsService.js"></script>-->  
 
+
 		<!-- SHARED -->
+
+			<!-- NAV BAR -->
+			<script src="shared/navBar/navBarController.js"></script>
+			<script src="shared/navBar/navBarDirective.js"></script>
+
+			<!-- USER ACCOUNT -->
+			<script src="shared/userAccount/userAccountService.js"></script>
+
+			<!-- HTTP -->
+			<script src="shared/http/httpService.js"></script>
+
+			<!-- HELPERS -->
+			<script src="shared/helpers/helperService.js"></script>
 
 	</body>
 </html>

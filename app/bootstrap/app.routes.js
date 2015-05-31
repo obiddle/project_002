@@ -1,11 +1,11 @@
 simplySocialApp.config(['$routeProvider', function($routeProvider) { 
   $routeProvider
         .when('/home', {
-            templateUrl: 'core/home/view.html',
+            templateUrl: 'core/home/homeView.html',
             controller: 'homeController'
         })
         .when('/settings', {
-            templateUrl: 'core/settings/view.html',
+            templateUrl: 'core/settings/settingsView.html',
             controller: 'settingsController'
         })
         .otherwise({
