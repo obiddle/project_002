@@ -1,0 +1,15 @@
+<div class="navBarContainer" ng-controller="navBarController">
+	<div class="navBarLogo">
+		simply<span class="logoGreyFont">social</span>
+	</div>
+	<div class="navBarActionsContainer">
+		<div class="navBarChatButton"> </div>
+		<input class="navBarSearchField" type="text" ng-model="search" autocorrect='on' ng-trim="false" maxlength="20" ng-enter=""></input>
+		<div class="navBarSettingsButton" ng-mouseenter="settingsMenuOpen = true" ng-mouseleave="settingsMenuOpen = false">
+			<div class="navBarUserAvatar" ng-style="setAvatarImage()"></div>
+		</div>
+	</div>
+	<div class="navBarSettingsContainer" ng-class="{navBarSettingsContainerActive: settingsMenuOpen}" ng-mouseenter="settingsMenuOpen = true" ng-mouseleave="settingsMenuOpen = false">
+</div>
+
+
