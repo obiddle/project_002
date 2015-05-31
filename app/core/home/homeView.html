@@ -1,7 +1,31 @@
-<div class="homeContainer">
+<div class="homeContainer" posts-view-navigator> <!-- require directive to handle posts view logic -->
 
 	<div class="homeMainContainer">
-		<div class="homeSendMessageContainer"></div>
+
+		<div class="homeSendMessageContainer">
+			<input class="homeSendMessageField" type="text" ng-model="messageText" autocorrect='on' ng-trim="false" maxlength="100" ng-enter="" placeholder='What’s on your mind?' tabindex="1"></input>
+			<div class="homeAddPhoneButton">Add Photo
+				<div class="touchEffectGreen" ng-click=""></div>
+			</div>
+			<div class="homeAddVideoButton">Add Video
+				<div class="touchEffectGreen" ng-click=""></div>
+			</div>
+		</div>
+
+		<div class="homePostsTabsContainer" posts-tabs-scope>
+			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'all'}" ng-click="postsViewNavigator.changePostsView('all')">ALL POSTS</div>
+			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'photos'}" ng-click="postsViewNavigator.changePostsView('photos')">PHOTOS</div>
+			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'videos'}" ng-click="postsViewNavigator.changePostsView('videos')">VIDEOS</div>
+		</div>
 	</div>
 
+	<div class="homePostsContainer">
+		<post-all-list-template></post-all-list-template>
+		<post-all-grid-template></post-all-grid-template>
+		<post-photos-grid-template></post-photos-grid-template>
+	</div>
+
+
+
 </div>
+
