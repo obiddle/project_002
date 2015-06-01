@@ -23,6 +23,7 @@
 		<div id="appContainer" ng-app="simplySocialApp">
 			<nav-bar-template></nav-bar-template>
 			<div id-"appViews" ng-view></div>
+			<send-message-template></send-message-template>
 		</div>
 
   		
@@ -45,6 +46,11 @@
 
 			<!-- HOME -->
 			<script src="core/home/homeController.js"></script>
+
+			<!-- MESSAGE -->
+			<script src="core/message/messageController.js"></script>
+			<script src="core/message/messageDirective.js"></script>
+			<script src="core/message/messageService.js"></script>
 
 			<!-- SETTINGS 
 			<script src="core/settings/settingsController.js"></script>

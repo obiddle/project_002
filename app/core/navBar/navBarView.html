@@ -7,7 +7,7 @@
 
 	<div class="navBarActionsContainer">
 		<div class="navBarChatButton"> 
-			<div class="touchEffectDark"></div>
+			<div class="touchEffectDark" ng-click="openMessage()"></div>
 		</div>
 		<input class="navBarSearchField" type="text" ng-model="searchText" autocorrect='on' ng-trim="false" maxlength="20" ng-enter="" tabindex="99"></input>
 		<div class="navBarSettingsButton" ng-mouseenter="settingsMenuOpen = true" ng-mouseleave="settingsMenuOpen = false">
