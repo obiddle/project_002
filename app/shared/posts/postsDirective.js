@@ -33,7 +33,7 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 			    this.postData[index].toggleComment = false;
 			}
 
-			this.openChunkComments = function(index, type){
+			this.openGridComments = function(index, type){
 				if(type === 'left'){
 					this.postData.left[index].toggleComment = true;
 				} else if (type === 'middle'){
@@ -43,7 +43,7 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 				}
 			}
 
-			this.closeChunkComments = function(index, type){
+			this.closeGridComments = function(index, type){
 				if(type === 'left'){
 					this.postData.left[index].toggleComment = false;
 				} else if (type === 'middle'){

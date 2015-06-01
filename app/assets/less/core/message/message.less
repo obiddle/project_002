@@ -1,0 +1,23 @@
+
+
+.messageContainer {position: absolute;z-index: 99;width: 100%;height: 100%; visibility: hidden;opacity: 0; .transition(visibility 0s linear 0.3s,opacity 0.2s ease-in);}
+.messageContainerActive {visibility: visible; opacity: 1;.transition(visibility 0s linear 0s,opacity 0.2s ease-in);}
+
+.messageBackgroundCover {position: absolute;z-index: 1;width: 100%;height: 100%; background-color: rgba(0, 0, 0, 0.8); cursor: pointer;}
+
+.sendMessageContainer {position: absolute; z-index: 2; top:0; bottom:0; left:0; right:0; margin: auto; height: 215px; width: 575px; .border-radius(4px); background-color: #dee1e6; .openSans-Light-font; }
+
+.messageCloseButton {position: absolute; top:-40px; right:-40px; width: 50px; height: 50px; background:url("@{messageImages}/close_button.png") no-repeat center ; background-size: 25px;cursor: pointer;} 
+
+.messageTitle {position: relative;padding: 22px 25px 0 25px; font-size: 17px;line-height: 17px; color:@blueLogoFont; .border-box;}
+
+.sendMessageField {position: relative; height: 90px; width: 525px;margin:20px auto 0 auto; padding:3px 10px 3px 10px;.border-radius(2px);.border-box; line-height: 24px;color:#3f454d; .openSans-Light-font; font-size: 16px;display:block;background-color: #fff;border:0;}
+
+.sendMessageField:focus {outline-width: 0;}
+
+.messageAddPhotoButton{position: absolute;left:29px;bottom:20px; color: #a7aab1;.openSans-Light-font;line-height: 25px;background:url("@{messageImages}/photo_icon_grey.png") no-repeat left center ; background-size: 20px;.border-box;padding-left:29px; font-size: 14px;} 
+
+.messageAddVideoButton{position: absolute;left:170px;bottom:20px; color: #a7aab1; .openSans-Light-font;line-height: 25px;background:url("@{messageImages}/video_icon_grey.png") no-repeat left center ; background-size: 20px;.border-box;padding-left:29px; font-size: 14px;} 
+
+
+.messagePostButton{position: absolute;right:25px;bottom:15px; width: 75px;line-height: 35px; text-align: center; color: #fff; .openSans-Bold-font; font-size: 14px; background-color: #01b286; .border-radius(4px);} 

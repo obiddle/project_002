@@ -1,6 +1,6 @@
 
 
-simplySocialApp.controller('navBarController', ['$scope', '$location', 'userAccountService', function ($scope, $location, userAccountService) {
+simplySocialApp.controller('navBarController', ['$scope', '$location', 'userAccountService', 'messageService', function ($scope, $location, userAccountService, messageService) {
     
 	function init(){
 		$scope.searchText = "";
@@ -15,6 +15,10 @@ simplySocialApp.controller('navBarController', ['$scope', '$location', 'userAcco
 
     $scope.changeView = function(view){
     	$location.path(view); 
+    }; 
+
+    $scope.openMessage = function(view){
+        messageService.openMessage(); 
     }; 
 
 }]);

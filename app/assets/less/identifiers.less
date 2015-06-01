@@ -10,6 +10,7 @@
 @navBarImages: "../images/navBar";
 @homeImages: "../images/home";
 @postsImages: "../images/post";
+@messageImages: "../images/message";
 
 // CROSS BROWSER MIXINS
 
@@ -50,6 +51,14 @@
 	    -ms-transition: @string; 
 	     -o-transition: @string; 
 	        transition: @string;
+}
+
+.transition(@string1, @string2: 0){
+	-webkit-transition: @string1, @string2;
+	   -moz-transition: @string1, @string2;
+	    -ms-transition: @string1, @string2; 
+	     -o-transition: @string1, @string2; 
+	        transition: @string1, @string2;
 }
 
 

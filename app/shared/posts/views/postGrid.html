@@ -6,8 +6,8 @@
 			<div class="postAllGridPhoto" ng-show="post.video" ng-style="postsViewNavigator.setBackgroundImage(post.video)"></div>
 
 			<div class="postToggleContainer">
-				<div class="expandCommentsButton" ng-hide="post.toggleComment || !post.comments" ng-click="postsViewNavigator.openChunkComments($index, post.column)">Expand</div>
-				<div class="collapseCommentsButton" ng-show="post.toggleComment" ng-click="postsViewNavigator.closeChunkComments($index, post.column)">Collapse</div>
+				<div class="expandCommentsButton" ng-hide="post.toggleComment || !post.comments" ng-click="postsViewNavigator.openGridComments($index, post.column)">Expand</div>
+				<div class="collapseCommentsButton" ng-show="post.toggleComment" ng-click="postsViewNavigator.closeGridComments($index, post.column)">Collapse</div>
 				<div class="postTimeGrid" ng-bind="post.time"></div>
 				<div class="postFavoriteButtonGrid"></div>
 				<div class="postShareButtonGrid"></div>
