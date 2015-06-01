@@ -1,6 +1,6 @@
 
 
-.homeContainer {position: absolute;top:60px;left: 0;z-index: 1;width: 100%; min-width: 750px; height: 100%;overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch;.proximaNova-Regular-font}
+.homeContainer {position: absolute;top:60px;left: 0;z-index: 1;width: 100%; min-width: 750px; height: 100%;overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; .border-box; padding-bottom: 60px;}
 
 .homeMainContainer {position: relative; width: 100%; height: 422px;background:url("@{globalImages}/main_bg_image.jpg") no-repeat center ;.background-cover;}
 
@@ -19,10 +19,13 @@
 .homeAddVideoButton{position: absolute;left:170px;bottom:20px; color:  rgba(255, 255, 255, 0.5);.openSans-Light-font;line-height: 25px;background:url("@{homeImages}/video_icon.png") no-repeat left center ; background-size: 20px;.border-box;padding-left:29px; font-size: 14px;} 
 
 
-.homePostsTabsContainer {position: absolute;bottom: 3px; left:50%; margin-left:-279px; width: 558px; height: 50px;.border-box;}
+.homePostsTabsContainer {position: absolute;bottom: 4px; left:50%; margin-left:-279px; width: 558px; height: 50px;.border-box;}
 
-.homePostsTab {position: relative;float: left;margin-right: 40px; line-height: 50px;color:#bec3cc; font-size: 13px; .openSans-Bold-font;padding: 0 10px 0 10px;}
+.homePostsTab {position: relative;float: left;margin-right: 40px; line-height: 50px;color:#bec3cc; font-size: 13px; .openSans-Bold-font;padding: 0 10px 0 10px;.singleTransition(color 0.2s ease-out);}
 
 .homePostsTab:hover {color:#fff;cursor: pointer;}
 
-.homePostsTabActive {border-bottom:3px solid #00cc99; color: #fff; .border-box;cursor: default!important}
+.homePostsTabActive {border-bottom:4px solid #00cc99; color: #fff; .border-box;cursor: default!important}
+
+.expand-off{visibility: hidden;}
+.expand-on{visibility: hidden;}

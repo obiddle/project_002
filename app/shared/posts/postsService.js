@@ -25,38 +25,49 @@ var dataBlobPosts = {"allPosts": [
         "comments" : [
             {
                 "time" : "1h",
-                "userName": "Jed Bridges",
-                "avatarImage": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
-                "comment": "Great way to start the week. Thanks for sharing!",
+                "user_name": "Kerem Suer",
+                "avatar_image": "assets/images/post/dataBlobImages/avatar_image_03.jpg", 
+                "text": "Great way to start the week. Thanks for sharing!"
             },
             {
                 "time" : "2h",
-                "userName": "Ren Walker",
-                "avatarImage": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
-                "comment": "Reeling inspired now... thanks for the great article",
+                "user_name": "Ren Walker",
+                "avatar_image": "assets/images/post/dataBlobImages/avatar_image_04.jpg",  
+                "text": "Reeling inspired now... thanks for the great article"
             }
         ],
-        "user" : [
-        	{
-		        "userName": "Sam Soffes",
-		        "avatarImage": "assets/images/post/dataBlobImages/avatar_image_01.jpg",	
-        	}
-        ]
+        "user" : {
+	        "user_name": "Sam Soffes",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg",	
+        }
+        
  
     },
     {
         "id": 02,
-        "time" : "3m",      
+        "time" : "25m",      
         "text" : "My view this morning is simply beautiful... instagram.com/p/mV0PUrHRwQ/",
-        "photo" : "assets/images/post/dataBlobImages/post_image_02.jpg",
+        "photo" : "assets/images/post/dataBlobImages/post_image_02.png",
         "video" : 0,
         "comments" : 0,
-        "user" : [
-        	{
-		        "userName": "Meg Robichaud",
-		        "avatarImage": "assets/images/post/dataBlobImages/avatar_image_02.jpg", 
-        	}
-        ]
+        "user" : {
+	        "user_name": "Meg Robichaud",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_02.jpg", 
+        }
+       
+    },
+    {
+        "id": 03,
+        "time" : "50m",      
+        "text" : "8 Apps to Turn Your Pipe Dreams into Prototypes on.mash.to/1oubyu8",
+        "photo" : 0,
+        "video" : 0,
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Kerem Suer",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_03.jpg", 
+        }
+       
     }
     // {
     // "id": 2,
