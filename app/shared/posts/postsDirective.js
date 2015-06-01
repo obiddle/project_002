@@ -5,28 +5,11 @@ simplySocialApp.directive('postsViewNavigator', [function () {
         restrict: 'EA',
         controller: function (postsService, $rootScope) {
 
-        	this.chunkPostData = function(){
-				data = {};
-				data.left = [];
-				data.middle = [];
-				data.right = [];
-				
-				for(index = 0; index < this.postData.length; index+= 3) {
-				  data.left.push(this.postData[index])
-				}	
-				for(index = 1; index < this.postData.length; index+= 3) {
-				  data.middle.push(this.postData[index])
-				}			
-				for(index = 2; index < this.postData.length; index+= 3) {
-				  data.right.push(this.postData[index])
-				}
-				return data;
-			}
 
 		    this.init = function(){
 		    	this.postType = "allListView";
 		    	this.postData = postsService.getPostData();	
-		    	this.postDataChunks = this.chunkPostData() // for masonry layout
+		    	this.photoData = postsService.getPhotoData();	
 		    }
 		    this.init()
 
@@ -50,23 +33,23 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 			    this.postData[index].toggleComment = false;
 			}
 
-			this.openChunckComments = function(index, type){
+			this.openChunkComments = function(index, type){
 				if(type === 'left'){
-					this.postDataChunks.left[index].toggleComment = true;
+					this.postData.left[index].toggleComment = true;
 				} else if (type === 'middle'){
-					this.postDataChunks.middle[index].toggleComment = true;
+					this.postData.middle[index].toggleComment = true;
 				} else {
-					this.postDataChunks.right[index].toggleComment = true;
+					this.postData.right[index].toggleComment = true;
 				}
 			}
 
 			this.closeChunkComments = function(index, type){
 				if(type === 'left'){
-					this.postDataChunks.left[index].toggleComment = false;
+					this.postData.left[index].toggleComment = false;
 				} else if (type === 'middle'){
-					this.postDataChunks.middle[index].toggleComment = false;
+					this.postData.middle[index].toggleComment = false;
 				} else {
-					this.postDataChunks.right[index].toggleComment = false;
+					this.postData.right[index].toggleComment = false;
 				}
 			}
 
@@ -115,5 +98,29 @@ simplySocialApp.directive("postsAllGridTemplate", function() {
         }
     };
 });
+
+simplySocialApp.directive("postsPhotosTemplate", function() {
+    return {
+        restrict: "AE",
+        require: '^postsViewNavigator',
+        templateUrl: function(){
+            return "shared/posts/views/photosGridView.html";  
+        },
+        link: function (scope, element, attrs, postsViewNavigatorCtrl) {
+            scope.postsViewNavigator = postsViewNavigatorCtrl;
+        }
+    };
+});
+
+simplySocialApp.directive("singlePostGridTemplate", function() {
+    return {
+        restrict: "AE",
+        templateUrl: function(){
+            return "shared/posts/views/postGrid.html";  
+        }
+    };
+});
+
+
 
 

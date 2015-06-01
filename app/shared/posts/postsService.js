@@ -6,8 +6,35 @@ simplySocialApp.factory('postsService', [ function () {
 
     factory.getPostData = function(){
 		var data = dataBlobPosts.allPosts;
-        return data;
+		postData = factory.chunkPostData(data)
+        return postData;
     }
+
+    factory.getPhotoData = function(){
+		var data = dataBlobPhotos.allPhotos;
+		postData = factory.chunkPostData(data)
+        return postData;
+    }
+
+    factory.chunkPostData = function(postData){
+		postData.left = [];
+		postData.middle = [];
+		postData.right = [];
+		
+		for(index = 0; index < postData.length; index+= 3) {
+			postData[index].column = 'left';
+			postData.left.push(postData[index])
+		}	
+		for(index = 1; index < postData.length; index+= 3) {
+			postData[index].column = 'middle';
+			postData.middle.push(postData[index])
+		}			
+		for(index = 2; index < postData.length; index+= 3) {
+			postData[index].column = 'right';
+			postData.right.push(postData[index])
+		}
+		return postData;
+	}
 
 	return factory;
 }])
@@ -170,6 +197,48 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Sam Soffes",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
+        }
+       
+    }
+]}
+
+var dataBlobPhotos = {"allPhotos": [
+    {
+        "id": 02,
+        "time" : "25m",      
+        "text" : "My view this morning is simply beautiful... instagram.com/p/mV0PUrHRwQ/",
+        "photo" : "assets/images/post/dataBlobImages/post_image_02.png",
+        "video" : 0,
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Meg Robichaud",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_02.jpg", 
+        }
+       
+    },
+    {
+        "id": 08,
+        "time" : "25m",      
+        "text" : "Solid Sunset here in San diego... instagram.com/p/mV0PUrHRwQ/",
+        "photo" : "assets/images/post/dataBlobImages/post_image_08.png",
+        "video" : 0,
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Sam Soffes",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
+        }
+       
+    },
+    {
+        "id": 08,
+        "time" : "25m",      
+        "text" : "My beach cruiser. I take it serving daily, check it... instagram.com/p/mV0PUrHRwQ/",
+        "photo" : "assets/images/post/dataBlobImages/post_image_01.png",
+        "video" : 0,
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Pallavi Gupta",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_07.jpg", 
         }
        
     }

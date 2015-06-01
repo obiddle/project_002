@@ -565,16 +565,17 @@ body {
 }
 .postText {
   position: relative;
-  padding: 9px 25px 15px 83px;
-  font-size: 15px;
-  line-height: 24px;
-  color: #70767f;
-  overflow: hidden;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 9px 25px 15px 83px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #70767f;
+  overflow: hidden;
 }
 .postAllListPhoto {
   position: relative;
@@ -603,7 +604,7 @@ body {
   z-index: 1;
   top: 0;
   left: 73px;
-  width: 100%;
+  width: 80px;
   height: 100%;
   font-size: 12px;
   line-height: 30px;
@@ -623,7 +624,7 @@ body {
   z-index: 1;
   top: 0;
   left: 73px;
-  width: 100%;
+  width: 80px;
   height: 100%;
   font-size: 12px;
   line-height: 30px;
@@ -702,7 +703,21 @@ body {
   background-size: cover;
   height: 215px;
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
+}
+.postTextGrid {
+  position: relative;
+  width: 96%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 9px 25px 15px 83px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #70767f;
+  overflow: hidden;
 }
 .postTimeGrid {
   position: absolute;
