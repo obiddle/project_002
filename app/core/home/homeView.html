@@ -13,17 +13,22 @@
 		</div>
 
 		<div class="homePostsTabsContainer" posts-tabs-scope>
-			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'allListView'}" ng-click="postsViewNavigator.changePostsView('allListView')">ALL POSTS</div>
+			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'allListView' || postsViewNavigator.postType === 'allGridView'}" ng-click="postsViewNavigator.changePostsView('allListView')">ALL POSTS</div>
 			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'photos'}" ng-click="postsViewNavigator.changePostsView('photos')">PHOTOS</div>
 			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'videos'}" ng-click="postsViewNavigator.changePostsView('videos')">VIDEOS</div>
+
+			<div class="togglePostButtonsContainer" ng-class="{togglePostButtonsContainerActive: postsViewNavigator.postType === 'allListView' || postsViewNavigator.postType === 'allGridView'}" >
+				<div class="toogleGridViewButton" ng-class="{toogleGridViewButtonActive: postsViewNavigator.postType === 'allGridView'}" ng-click="postsViewNavigator.changePostsView('allGridView')"></div>
+				<div class="toogleListViewButton" ng-class="{toogleListViewButtonActive: postsViewNavigator.postType === 'allListView'}" ng-click="postsViewNavigator.changePostsView('allListView')"></div>
+			</div>
 		</div>
 	</div>
 
-	<div class="homePostsContainer">
-		<posts-all-list-template></post-all-list-template>
-		<posts-all-grid-template></post-all-grid-template>
-		<posts-photos-template></post-photos-grid-template>
-	</div>
+<div class="homePostsContainer">
+	<posts-all-list-template></posts-all-list-template>
+	<posts-all-grid-template></posts-all-grid-template>
+	<posts-photos-template></posts-photos-grid-template>
+<div>
 
 
 

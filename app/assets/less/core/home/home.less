@@ -27,5 +27,16 @@
 
 .homePostsTabActive {border-bottom:4px solid #00cc99; color: #fff; .border-box;cursor: default!important}
 
-.expand-off{visibility: hidden;}
-.expand-on{visibility: hidden;}
+
+.togglePostButtonsContainer{position: absolute; z-index: 1; top:0; right:0;height: 100%;width: 80px; visibility: hidden;}
+.togglePostButtonsContainerActive {visibility: visible;}
+
+.toogleGridViewButton {position: absolute;top:0; right:0; height: 50px; width: 20px; background:url("@{homeImages}/grid_icon.png") no-repeat center ; background-size: 11px;cursor: pointer;} 
+.toogleGridViewButtonActive {background-image:url("@{homeImages}/grid_icon_active.png")}
+
+.toogleListViewButton {position: absolute;top:0; right:26px; height: 50px; width: 20px; background:url("@{homeImages}/list_icon.png") no-repeat center ; background-size: 11px;cursor: pointer;} 
+.toogleListViewButtonActive {background-image:url("@{homeImages}/list_icon_active.png")}
+
+.homePostsContainer {position: relative; width: 100%; max-width: 1250px; margin: auto; padding: 25px;.border-box }
+
+
