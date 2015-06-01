@@ -460,25 +460,6 @@ body {
   font-family: 'Open Sans';
   font-weight: 300;
 }
-.postUserName {
-  position: relative;
-  padding: 25px 25px 0 83px;
-  font-size: 17px;
-  line-height: 17px;
-  color: #3f454d;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.postText {
-  position: relative;
-  padding: 9px 25px 15px 83px;
-  font-size: 15px;
-  line-height: 24px;
-  color: #70767f;
-}
 .postAvatar {
   position: absolute;
   top: 25px;
@@ -500,6 +481,47 @@ body {
   color: #bec3cc;
   font-size: 14px;
   line-height: 14px;
+}
+.postFavoriteButton {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  right: 55px;
+  width: 35px;
+  height: 35px;
+  background: url("../images/post/heart_icon.png") no-repeat center;
+  background-size: 15px;
+  cursor: pointer;
+}
+.postShareButton {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  right: 92px;
+  width: 35px;
+  height: 35px;
+  background: url("../images/post/share_icon.png") no-repeat center;
+  background-size: 15px;
+  cursor: pointer;
+}
+.postUserName {
+  position: relative;
+  padding: 25px 25px 0 83px;
+  font-size: 17px;
+  line-height: 17px;
+  color: #3f454d;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.postText {
+  position: relative;
+  padding: 9px 25px 15px 83px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #70767f;
 }
 .postAllListPhoto {
   position: relative;
