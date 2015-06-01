@@ -13,16 +13,16 @@
 		</div>
 
 		<div class="homePostsTabsContainer" posts-tabs-scope>
-			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'all'}" ng-click="postsViewNavigator.changePostsView('all')">ALL POSTS</div>
+			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'allListView'}" ng-click="postsViewNavigator.changePostsView('allListView')">ALL POSTS</div>
 			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'photos'}" ng-click="postsViewNavigator.changePostsView('photos')">PHOTOS</div>
 			<div class="homePostsTab" ng-class="{homePostsTabActive: postsViewNavigator.postType === 'videos'}" ng-click="postsViewNavigator.changePostsView('videos')">VIDEOS</div>
 		</div>
 	</div>
 
 	<div class="homePostsContainer">
-		<post-all-list-template></post-all-list-template>
-		<post-all-grid-template></post-all-grid-template>
-		<post-photos-grid-template></post-photos-grid-template>
+		<posts-all-list-template></post-all-list-template>
+		<posts-all-grid-template></post-all-grid-template>
+		<posts-photos-template></post-photos-grid-template>
 	</div>
 
 

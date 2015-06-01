@@ -1,0 +1,32 @@
+<div class="postsContainer" ng-class="{postsActive: postsViewNavigator.postType === 'allListView'}">
+
+	<div class="postRowListFormat" ng-repeat="post in postsViewNavigator.postData">
+
+		<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(post.user.avatar_image)"></div>
+		<div class="postTime" ng-bind="post.time"></div>
+		<div class="postUserName" ng-bind="post.user.user_name"></div>
+		<div class="postText" ng-bind="post.text"></div>
+		<div class="postAllListPhoto" ng-show="post.photo" ng-style="postsViewNavigator.setBackgroundImage(post.photo)"></div>
+		<div class="postToggleCommentsButton" ng-show="post.comments">
+			<div class="expandCommentsButton" ng-hide="post.toggleComment" ng-click="postsViewNavigator.openComments($index)">Expand</div>
+			<div class="collapseCommentsButton" ng-show="post.toggleComment" ng-click="postsViewNavigator.closeComments($index)">Collapse</div>
+		</div>
+
+		<div class="postCommentsContainer" ng-show="post.toggleComment" >
+			<div class="commentRowListFormat" ng-repeat="comment in post.comments">
+						<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(comment.avatar_image)"></div>
+						<div class="postTime" ng-bind="comment.time"></div>
+						<div class="postUserName" ng-bind="comment.user_name"></div>
+						<div class="postText" ng-bind="comment.text"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--
+ng-class="{'btn-off':!toggled, 'btn-on':toggled}" ng-click="toggled = !toggled"
+
+or this if above does not work
+http://stackoverflow.com/questions/19331779/how-to-highlight-a-selected-row-in-ngrepeat
+-->
