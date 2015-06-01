@@ -1,81 +1,20 @@
 <div class="postsGridContainer" ng-class="{postsActive: postsViewNavigator.postType === 'allGridView'}">
 
 	<div class="gridLeft">
-		<div class="postRowGrid" ng-repeat="post in postsViewNavigator.postDataChunks.left">
-			<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(post.user.avatar_image)"></div>
-			<div class="postUserName" ng-bind="post.user.user_name"></div>
-			<div class="postText" ng-bind="post.text"></div>
-			<div class="postAllGridPhoto" ng-show="post.photo" ng-style="postsViewNavigator.setBackgroundImage(post.photo)"></div>
-			<div class="postAllGridPhoto" ng-show="post.video" ng-style="postsViewNavigator.setBackgroundImage(post.video)"></div>
-
-			<div class="postToggleContainer">
-				<div class="expandCommentsButton" ng-hide="post.toggleComment || !post.comments" ng-click="postsViewNavigator.openChunckComments($index, 'left')">Expand</div>
-				<div class="collapseCommentsButton" ng-show="post.toggleComment" ng-click="postsViewNavigator.closeChunkComments($index, 'left')">Collapse</div>
-				<div class="postTimeGrid" ng-bind="post.time"></div>
-				<div class="postFavoriteButtonGrid"></div>
-				<div class="postShareButtonGrid"></div>
-			</div>
-
-			<div class="postCommentsContainer" ng-show="post.toggleComment" >
-				<div class="commentRowListFormat" ng-repeat="comment in post.comments">
-					<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(comment.avatar_image)"></div>
-					<div class="postUserName" ng-bind="comment.user_name"></div>
-					<div class="postText" ng-bind="comment.text"></div>
-				</div>
-			</div>
+		<div class="postRowGrid" ng-repeat="post in postsViewNavigator.postData.left">
+			<single-post-grid-template></single-post-grid-template>
 		</div>
 	</div>
 
 	<div class="gridLeft">
-		<div class="postRowGrid" ng-repeat="post in postsViewNavigator.postDataChunks.middle">
-			<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(post.user.avatar_image)"></div>
-			<div class="postUserName" ng-bind="post.user.user_name"></div>
-			<div class="postText" ng-bind="post.text"></div>
-			<div class="postAllGridPhoto" ng-show="post.photo" ng-style="postsViewNavigator.setBackgroundImage(post.photo)"></div>
-			<div class="postAllGridPhoto" ng-show="post.video" ng-style="postsViewNavigator.setBackgroundImage(post.video)"></div>
-
-			<div class="postToggleContainer">
-				<div class="expandCommentsButton" ng-hide="post.toggleComment || !post.comments" ng-click="postsViewNavigator.openChunckComments($index, 'middle')">Expand</div>
-				<div class="collapseCommentsButton" ng-show="post.toggleComment" ng-click="postsViewNavigator.closeChunkComments($index, 'middle')">Collapse</div>
-				<div class="postTimeGrid" ng-bind="post.time"></div>
-				<div class="postFavoriteButtonGrid"></div>
-				<div class="postShareButtonGrid"></div>
-			</div>
-
-			<div class="postCommentsContainer" ng-show="post.toggleComment" >
-				<div class="commentRowListFormat" ng-repeat="comment in post.comments">
-					<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(comment.avatar_image)"></div>
-					<div class="postUserName" ng-bind="comment.user_name"></div>
-					<div class="postText" ng-bind="comment.text"></div>
-				</div>
-			</div>
+		<div class="postRowGrid" ng-repeat="post in postsViewNavigator.postData.middle">
+			<single-post-grid-template></single-post-grid-template>
 		</div>
 	</div>
 
 	<div class="gridRight">
-		<div class="postRowGrid" ng-repeat="post in postsViewNavigator.postDataChunks.right">
-
-			<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(post.user.avatar_image)"></div>
-			<div class="postUserName" ng-bind="post.user.user_name"></div>
-			<div class="postText" ng-bind="post.text"></div>
-			<div class="postAllGridPhoto" ng-show="post.photo" ng-style="postsViewNavigator.setBackgroundImage(post.photo)"></div>
-			<div class="postAllGridPhoto" ng-show="post.video" ng-style="postsViewNavigator.setBackgroundImage(post.video)"></div>
-
-			<div class="postToggleContainer">
-				<div class="expandCommentsButton" ng-hide="post.toggleComment || !post.comments" ng-click="postsViewNavigator.openChunckComments($index, 'right')">Expand</div>
-				<div class="collapseCommentsButton" ng-show="post.toggleComment" ng-click="postsViewNavigator.closeChunkComments($index, 'right')">Collapse</div>
-				<div class="postTimeGrid" ng-bind="post.time"></div>
-				<div class="postFavoriteButtonGrid"></div>
-				<div class="postShareButtonGrid"></div>
-			</div>
-
-			<div class="postCommentsContainer" ng-show="post.toggleComment" >
-				<div class="commentRowListFormat" ng-repeat="comment in post.comments">
-					<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(comment.avatar_image)"></div>
-					<div class="postUserName" ng-bind="comment.user_name"></div>
-					<div class="postText" ng-bind="comment.text"></div>
-				</div>
-			</div>
+		<div class="postRowGrid" ng-repeat="post in postsViewNavigator.postData.right">
+			<single-post-grid-template></single-post-grid-template>
 		</div>
 	</div>
 	<div class="clear"></div>
