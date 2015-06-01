@@ -1,9 +1,10 @@
-.postsContainer{position: relative; visibility: hidden;padding-top: 25px;}
-.postsActive {visibility: visible;}
 
+.postsContainer{position: relative;  display: none;}
+.postsGridContainer{position: relative;  display: none; }
 
+.postsActive {display: inherit;}
 
-.postRowListFormat {position:relative;width: 575px;margin: 25px auto 10px auto; .border-box; .border-radius(4px);border:1px solid #dee1e5;.openSans-Light-font;}
+.postRowList {position:relative;width: 575px;margin: 25px auto 10px auto; .border-box; .border-radius(4px);border:1px solid #dee1e5;.openSans-Light-font;}
 
 .postAvatar {position: absolute;top:25px;left:25px; background: no-repeat center ;background-size: 100%; height: 40px; width: 40px; .border-radius(4px)}
 
@@ -15,17 +16,36 @@
 
 .postUserName {position: relative;padding: 25px 25px 0 83px; font-size: 17px;line-height: 17px; color:#3f454d;.border-box;}
 
-.postText {position: relative;padding: 9px 25px 15px 83px;font-size: 15px;line-height: 24px;color:@blueLogoFont; }
+.postText {position: relative;padding: 9px 25px 15px 83px;font-size: 15px;line-height: 24px;color:@blueLogoFont;overflow: hidden;.border-box }
 
 
 
-.postAllListPhoto {position: relative; background: no-repeat center ;background-size: 100%; height: 315px; width: 100%; .border-radius(4px)}
+.postAllListPhoto {position: relative; background: no-repeat center ;.background-cover; height: 315px; width: 100%; .border-radius(0 0 4px 4px);margin-top: 10px;}
 
-.postToggleCommentsButton {position: relative;margin:0 0 10px 73px;height: 30px;width: 80px;}
+.postToggleContainer {position: relative;margin:0 0 10px 0px;height: 30px;width: 100%;}
 
-.expandCommentsButton {position: absolute;z-index: 1;top:0;left:0;width: 100%;height: 100%; font-size: 12px;line-height: 30px;color:#bec3cc; background:url("@{postsImages}/down_arrow_icon.png") no-repeat 58px center;background-size: 11px;cursor:pointer;padding: 0 10px 0 10px; .border-box;}
+.expandCommentsButton {position: absolute;z-index: 1;top:0;left:73px;width: 100%;height: 100%; font-size: 12px;line-height: 30px;color:#bec3cc; background:url("@{postsImages}/down_arrow_icon.png") no-repeat 58px center;background-size: 11px;cursor:pointer;padding: 0 10px 0 10px; .border-box;}
 
-.collapseCommentsButton {position: absolute;z-index: 1;top:0;left:0;width: 100%;height: 100%; font-size: 12px;line-height: 30px;color:#bec3cc; background:url("@{postsImages}/up_arrow_icon.png") no-repeat 65px center;background-size: 11px;cursor:pointer;padding: 0 10px 0 10px; .border-box;}
+.collapseCommentsButton {position: absolute;z-index: 1;top:0;left:73px;width: 100%;height: 100%; font-size: 12px;line-height: 30px;color:#bec3cc; background:url("@{postsImages}/up_arrow_icon.png") no-repeat 65px center;background-size: 11px;cursor:pointer;padding: 0 10px 0 10px; .border-box;}
 
 .postCommentsContainer {position: relative;width: 100%;.border-box;}
+
 .commentRowListFormat {position:relative;width:100%;padding:0px 0 25px 0; .border-box;border-top:1px solid #eff0f2;background-color: #f9fafc;}
+
+//GRID VIEW
+
+.gridLeft  {position: relative;float: left; width: 33%;padding-right: 25px;.border-box;}
+.gridRight  {position: relative;float: left; width: 34%;}
+
+.postRowGrid {position:relative;width: 100%;margin: 25px auto 10px auto; .border-box; .border-radius(4px);border:1px solid #dee1e5;.openSans-Light-font;}
+
+.postAllGridPhoto {position: relative; background: no-repeat center ;.background-cover; height: 215px; width: 100%; margin-top: 10px;}
+
+.postTimeGrid {position: absolute;top:10px;right:25px; color:#bec3cc;font-size: 14px;line-height: 14px;}
+
+.postFavoriteButtonGrid {position: absolute;z-index: 1;top:0px;right:55px;width: 35px;height: 35px; background:url("@{postsImages}/heart_icon.png") no-repeat center;background-size: 15px;cursor:pointer; }
+
+.postShareButtonGrid {position: absolute;z-index: 1;top:0px;right:92px;width: 35px;height: 35px; background:url("@{postsImages}/share_icon.png") no-repeat center;background-size: 15px;cursor:pointer; }
+
+
+.clear {clear:both;}

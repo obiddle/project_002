@@ -428,21 +428,68 @@ body {
   box-sizing: border-box;
   cursor: default !important;
 }
-.expand-off {
+.togglePostButtonsContainer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80px;
   visibility: hidden;
 }
-.expand-on {
-  visibility: hidden;
+.togglePostButtonsContainerActive {
+  visibility: visible;
+}
+.toogleGridViewButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 20px;
+  background: url("../images/home/grid_icon.png") no-repeat center;
+  background-size: 11px;
+  cursor: pointer;
+}
+.toogleGridViewButtonActive {
+  background-image: url("../images/home/grid_icon_active.png");
+}
+.toogleListViewButton {
+  position: absolute;
+  top: 0;
+  right: 26px;
+  height: 50px;
+  width: 20px;
+  background: url("../images/home/list_icon.png") no-repeat center;
+  background-size: 11px;
+  cursor: pointer;
+}
+.toogleListViewButtonActive {
+  background-image: url("../images/home/list_icon_active.png");
+}
+.homePostsContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .postsContainer {
   position: relative;
-  visibility: hidden;
-  padding-top: 25px;
+  display: none;
+}
+.postsGridContainer {
+  position: relative;
+  display: none;
 }
 .postsActive {
-  visibility: visible;
+  display: inherit;
 }
-.postRowListFormat {
+.postRowList {
   position: relative;
   width: 575px;
   margin: 25px auto 10px auto;
@@ -522,30 +569,40 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: #70767f;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .postAllListPhoto {
   position: relative;
   background: no-repeat center;
-  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 315px;
   width: 100%;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  margin-top: 10px;
 }
-.postToggleCommentsButton {
+.postToggleContainer {
   position: relative;
-  margin: 0 0 10px 73px;
+  margin: 0 0 10px 0px;
   height: 30px;
-  width: 80px;
+  width: 100%;
 }
 .expandCommentsButton {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: 73px;
   width: 100%;
   height: 100%;
   font-size: 12px;
@@ -565,7 +622,7 @@ body {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: 73px;
   width: 100%;
   height: 100%;
   font-size: 12px;
@@ -601,4 +658,82 @@ body {
   box-sizing: border-box;
   border-top: 1px solid #eff0f2;
   background-color: #f9fafc;
+}
+.gridLeft {
+  position: relative;
+  float: left;
+  width: 33%;
+  padding-right: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gridRight {
+  position: relative;
+  float: left;
+  width: 34%;
+}
+.postRowGrid {
+  position: relative;
+  width: 100%;
+  margin: 25px auto 10px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #dee1e5;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+.postAllGridPhoto {
+  position: relative;
+  background: no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 215px;
+  width: 100%;
+  margin-top: 10px;
+}
+.postTimeGrid {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #bec3cc;
+  font-size: 14px;
+  line-height: 14px;
+}
+.postFavoriteButtonGrid {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 55px;
+  width: 35px;
+  height: 35px;
+  background: url("../images/post/heart_icon.png") no-repeat center;
+  background-size: 15px;
+  cursor: pointer;
+}
+.postShareButtonGrid {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 92px;
+  width: 35px;
+  height: 35px;
+  background: url("../images/post/share_icon.png") no-repeat center;
+  background-size: 15px;
+  cursor: pointer;
+}
+.clear {
+  clear: both;
 }
