@@ -4,6 +4,8 @@
 
 		<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(post.user.avatar_image)"></div>
 		<div class="postTime" ng-bind="post.time"></div>
+		<div class="postFavoriteButton"></div>
+		<div class="postShareButton"></div>
 		<div class="postUserName" ng-bind="post.user.user_name"></div>
 		<div class="postText" ng-bind="post.text"></div>
 		<div class="postAllListPhoto" ng-show="post.photo" ng-style="postsViewNavigator.setBackgroundImage(post.photo)"></div>
@@ -14,10 +16,12 @@
 
 		<div class="postCommentsContainer" ng-show="post.toggleComment" >
 			<div class="commentRowListFormat" ng-repeat="comment in post.comments">
-						<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(comment.avatar_image)"></div>
-						<div class="postTime" ng-bind="comment.time"></div>
-						<div class="postUserName" ng-bind="comment.user_name"></div>
-						<div class="postText" ng-bind="comment.text"></div>
+				<div class="postAvatar" ng-style="postsViewNavigator.setBackgroundImage(comment.avatar_image)"></div>
+				<div class="postTime" ng-bind="comment.time"></div>
+				<div class="postFavoriteButton"></div>
+				<div class="postShareButton"></div>
+				<div class="postUserName" ng-bind="comment.user_name"></div>
+				<div class="postText" ng-bind="comment.text"></div>
 			</div>
 		</div>
 	</div>
