@@ -122,6 +122,19 @@ simplySocialApp.directive("postsVideosTemplate", function() {
     };
 });
 
+simplySocialApp.directive("postsUserListTemplate", function() {
+    return {
+        restrict: "AE",
+        require: '^postsViewNavigator',
+        templateUrl: function(){
+            return "shared/posts/views/userListView.html";  
+        },
+        link: function (scope, element, attrs, postsViewNavigatorCtrl) {
+            scope.postsViewNavigator = postsViewNavigatorCtrl;
+        }
+    };
+});
+
 simplySocialApp.directive("singlePostGridTemplate", function() {
     return {
         restrict: "AE",
