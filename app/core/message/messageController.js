@@ -13,13 +13,16 @@ simplySocialApp.controller('messageController', ['$scope', 'postsService', 'help
     }; 
 
     $scope.createMessage = function(){
-    	helperService.beginPromiseChain($scope.messageText)
-    	.then(postsService.buildPostParams)
-    	.then(postsService.createNewMessage)
-    	.then(postsService.updatePosts)
-    	.then(messageService.closeMessage)
-    	.then(clearParams)
-    	.catch(errorhandler)
+    	if($scope.messageText !== ""){
+	    	helperService.beginPromiseChain($scope.messageText)
+	    	.then(postsService.buildPostParams)
+	    	.then(postsService.createNewMessage)
+	    	.then(postsService.updatePosts)
+	    	.then(messageService.closeMessage)
+	    	.then(clearParams)
+	    	.catch(errorhandler)	
+    	}
+
     }
 
     function clearParams(){
