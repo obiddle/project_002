@@ -6,13 +6,14 @@ simplySocialApp.factory('userAccountService', [ function () {
 
     factory.getUserData = function(){
 		var data = {}
+		data.id = 100;
 		data.name = "Owen Biddle";
 		data.avatar_image = "assets/images/http/avatar_image.jpg";
-		data.description = "Front-end & mobile Engineer Living in San Diego, CA"
-		data.website = "https://www.linkedin.com/in/owenbiddle"
-		data.email = "obiddle@gmail.com"
-		data.password = "mypassword"
-		data.preferences = []
+		data.description = "Front-end & mobile Engineer Living in San Diego, CA";
+		data.website = "https://www.linkedin.com/in/owenbiddle";
+		data.email = "obiddle@gmail.com";
+		data.password = "mypassword";
+		data.preferences = [];
 		data.preferences[0] = 1;
 		data.preferences[1] = 1;
 		data.preferences[2] = 1;

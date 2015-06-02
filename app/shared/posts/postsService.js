@@ -1,7 +1,7 @@
 
 
 
-simplySocialApp.factory('postsService', [ function () {
+simplySocialApp.factory('postsService', [ 'userAccountService', '$rootScope', function (userAccountService, $rootScope) {
 	var factory = {}
 
     factory.getPostData = function(){
@@ -36,6 +36,36 @@ simplySocialApp.factory('postsService', [ function () {
 		return postData;
 	}
 
+	factory.buildPostParams = function(messageText){
+		var userData = userAccountService.getUserData();
+
+		var data = {}
+
+		data.id = 1;
+		data.time = '1m';
+		data.text = messageText;
+		data.photo = 0;
+		data.video = 0;
+		data.comments = 0;
+
+		data.user = {}
+		data.user.user_name = userData.name;
+		data.user.avatar_image = userData.avatar_image 
+		data.user.id = userData.id
+
+		return data;
+
+	}
+
+	factory.createNewMessage = function(data){
+		dataBlobPosts.allPosts.unshift(data)
+		return
+	}
+
+	factory.updatePosts = function(){
+		$rootScope.$broadcast('update-post-data');
+	}
+
 	return factory;
 }])
 
@@ -65,7 +95,9 @@ var dataBlobPosts = {"allPosts": [
         ],
         "user" : {
 	        "user_name": "Sam Soffes",
-	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg",	
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg",
+	        "id" : 1
+
         }
         
  
@@ -80,6 +112,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Meg Robichaud",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_02.jpg", 
+	        "id" : 2
         }
        
     },
@@ -106,6 +139,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Kerem Suer",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_03.jpg", 
+	        "id" : 3
         }
        
     },
@@ -132,6 +166,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Ren Walker",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_04.jpg", 
+	        "id" : 4
         }
        
     },
@@ -145,6 +180,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Liang Shi",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_05.jpg", 
+	        "id" : 5
         }
        
     },
@@ -158,6 +194,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Vitor Leal",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_06.jpg", 
+	        "id" : 6
         }
        
     },
@@ -184,6 +221,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Pallavi Gupta",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_07.jpg", 
+	        "id" : 7
         }
        
     },
@@ -197,6 +235,7 @@ var dataBlobPosts = {"allPosts": [
         "user" : {
 	        "user_name": "Sam Soffes",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
+	        "id" : 8
         }
        
     }
@@ -213,6 +252,7 @@ var dataBlobPhotos = {"allPhotos": [
         "user" : {
 	        "user_name": "Meg Robichaud",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_02.jpg", 
+	        "id" : 9
         }
        
     },
@@ -226,6 +266,7 @@ var dataBlobPhotos = {"allPhotos": [
         "user" : {
 	        "user_name": "Sam Soffes",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
+	        "id" : 10
         }
        
     },
@@ -239,6 +280,7 @@ var dataBlobPhotos = {"allPhotos": [
         "user" : {
 	        "user_name": "Pallavi Gupta",
 	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_07.jpg", 
+	        "id" : 11
         }
        
     }
