@@ -1,10 +1,10 @@
 # Run the Application
 
-The simplest way to start this server is:
+The simplest way to run the app is:
 
 ```
 npm start
 ```
 
-Browse the app at http://localhost:8000/app/index.html.
+Then view it locally at http://localhost:8000/app/index.html.
 
