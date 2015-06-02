@@ -11,6 +11,7 @@ simplySocialApp.factory('userAccountService', [ function () {
 		data.avatar_image = "assets/images/http/avatar_image.jpg";
 		data.description = "Front-end & mobile Engineer Living in San Diego, CA";
 		data.website = "https://www.linkedin.com/in/owenbiddle";
+		data.website_name = "linkedin.com/in/owenbiddle"
 		data.email = "obiddle@gmail.com";
 		data.password = "mypassword";
 		data.preferences = [];

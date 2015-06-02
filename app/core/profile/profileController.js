@@ -1,24 +1,22 @@
 
 
-simplySocialApp.controller('settingsController', [ '$scope', 'userAccountService', function ($scope, userAccountService) {
+simplySocialApp.controller('profileController', ['$scope', 'userAccountService', 'messageService', function ($scope, userAccountService, messageService){
     
-	function init(){
-		$scope.userData = userAccountService.getUserData();
-	}
+
+    function init(){
+        $scope.userData = userAccountService.getUserData();
+    }
     init()
 
     $scope.setAvatarImage = function(){
         return { 'background-image': 'url(' + $scope.userData.avatar_image + ')' }
     }
 
-    $scope.togglePreference = function(index, status){
-    	if(status == 1){
-    		$scope.userData.preferences[index] = 0;
-    	} else {
-    		$scope.userData.preferences[index] = 1;
-    	}
-    }
+    $scope.openMessage = function(view){
+        messageService.openMessage(); 
+    }; 
 
 }]);
+
 
 
