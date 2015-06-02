@@ -8,7 +8,7 @@ simplySocialApp.factory('userAccountService', [ function () {
 		var data = {}
 		data.id = 100;
 		data.name = "Owen Biddle";
-		data.avatar_image = "assets/images/http/avatar_image.jpg";
+		data.avatar_image = "assets/images/post/dataBlobImages/avatar_image.jpg";
 		data.description = "Front-end & mobile Engineer Living in San Diego, CA";
 		data.website = "https://www.linkedin.com/in/owenbiddle";
 		data.website_name = "linkedin.com/in/owenbiddle"
