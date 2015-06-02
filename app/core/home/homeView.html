@@ -3,13 +3,17 @@
 	<div class="homeMainContainer">
 
 		<div class="homeSendMessageContainer">
-			<input class="homeSendMessageField" type="text" ng-model="messageText" autocorrect='on' ng-trim="false" maxlength="100" ng-enter="" placeholder='What’s on your mind?' tabindex="1"></input>
+			<input class="homeSendMessageField" type="text" ng-model="messageText" autocorrect='on' ng-trim="false" maxlength="100" ng-enter="" placeholder='What’s on your mind?' tabindex="1" ng-keydown="activePostButton()"></input>
 			<div class="homeAddPhotoButton">Add Photo
 				<div class="touchEffectGreen" ng-click=""></div>
 			</div>
 			<div class="homeAddVideoButton">Add Video
 				<div class="touchEffectGreen" ng-click=""></div>
 			</div>
+			<div class="homePostButton" ng-class="{homePostButtonActive: displayPostButton}">Post
+				<div class="touchEffectGreen" ng-click="createMessage()"></div>
+			</div>
+			
 		</div>
 
 		<div class="homePostsTabsContainer" posts-tabs-scope>

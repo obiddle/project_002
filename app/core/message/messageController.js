@@ -18,8 +18,12 @@ simplySocialApp.controller('messageController', ['$scope', 'postsService', 'help
     	.then(postsService.createNewMessage)
     	.then(postsService.updatePosts)
     	.then(messageService.closeMessage)
+    	.then(clearParams)
     	.catch(errorhandler)
+    }
 
+    function clearParams(){
+    	$scope.messageText = "";
     }
 
     function errorhandler(data){

@@ -50,9 +50,13 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 			}
 
             $rootScope.$on("update-post-data", function(e) {
-            	this.postData = postsService.getPostData();	
-		    	this.photoData = postsService.getPhotoData();	
+            	this.updatePostData();
             });
+
+		    this.updatePostData = function(){
+				this.postData = postsService.getPostData();	
+		    	this.photoData = postsService.getPhotoData();	
+		    }
 
         }
     }
