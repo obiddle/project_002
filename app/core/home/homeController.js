@@ -33,7 +33,7 @@ simplySocialApp.controller('homeController', ['$scope', 'postsService', 'helperS
     }
 
     function errorhandler(data){
-        // mocking data so no erros should happen
+        // do something
     }
 
 }]);
