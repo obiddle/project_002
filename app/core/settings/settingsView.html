@@ -1,5 +1,53 @@
 <div class="settingsContainer">
 
+	<div class="settingsWrapper">
+		<div class="settingsTitle">Settings</div>
+		<div class="settingsSection">
+			<div class="settingsSectionTitle">ACCOUNT</div>
+			<div class="settingsAvatarImage" ng-style="setAvatarImage()"></div>
+			<div class="settingsChangeImageButton">change</div>
+			<input class="settingsField settingsNameIcon" type="text" ng-model="userData.name" autocorrect='on' ng-trim="false" maxlength="20" ng-enter="" tabindex="99"></input>
+			<input class="settingsField settingsEmailIcon" type="text" ng-model="userData.email" autocorrect='on' ng-trim="false" maxlength="20" ng-enter="" tabindex="99"></input>
+			<input class="settingsField settingsPasswordIcon" type="password" ng-model="userData.password" autocorrect='on' ng-trim="false" maxlength="20" ng-enter="" tabindex="99"></input>
+		</div>
+		<div class="settingsSection">
+			<div class="settingsSectionTitle settingsSectionTitlePadding">NOTIFICATIONS</div>
+			<div class="settingsPreference">email me when my posts are marked as 
+				<div class="settingsPreferenceToggle" ng-class="{settingsPreferenceToggleActive: userData.preferences[0] == 1}" ng-click="togglePreference(0, userData.preferences[0])"></div>
+			</div>
+			<div class="settingsPreference">email me when I’m mentioned
+				<div class="settingsPreferenceToggle" ng-class="{settingsPreferenceToggleActive: userData.preferences[1] == 1}" ng-click="togglePreference(1, userData.preferences[1])"></div>
+			</div>
+			<div class="settingsPreference">email me when I get a reply
+				<div class="settingsPreferenceToggle" ng-class="{settingsPreferenceToggleActive: userData.preferences[2] == 1}" ng-click="togglePreference(2, userData.preferences[2])"></div>
+			</div>
+			<div class="settingsPreference">email me when someone follows me
+				<div class="settingsPreferenceToggle" ng-class="{settingsPreferenceToggleActive: userData.preferences[3] == 1}" ng-click="togglePreference(3, userData.preferences[3])"></div>
+			</div>
+		</div>
+		<div class="settingsSection">
+			<div class="settingsSectionTitle settingsSectionTitlePadding">PRIVACY</div>
+			<div class="settingsPreference settingsPreferencePadding">allow anyone to tag me
+				<div class="settingsPreferenceInput" ng-class="{settingsPreferenceInputActive: userData.preferences[4] == 1}" ng-click="togglePreference(4, userData.preferences[4])"></div>
+			</div>
+			<div class="settingsPreference settingsPreferencePadding">only allow people I follow to tag me
+				<div class="settingsPreferenceInput" ng-class="{settingsPreferenceInputActive: userData.preferences[5] == 1}" ng-click="togglePreference(5, userData.preferences[5])"></div>
+			</div>
+			<div class="settingsPreference settingsPreferencePadding">don't allow anyone to tag me
+				<div class="settingsPreferenceInput" ng-class="{settingsPreferenceInputActive: userData.preferences[6] == 1}" ng-click="togglePreference(6, userData.preferences[6])"></div>
+			</div>
+			<div class="settingsPreference settingsPreferencePadding">add a location to my posts
+				<div class="settingsPreferenceInput" ng-class="{settingsPreferenceInputActive: userData.preferences[7] == 1}" ng-click="togglePreference(7, userData.preferences[7])"></div>
+			</div>
+			<div class="settingsPreference settingsPreferencePadding">let others find me by my email address
+				<div class="settingsPreferenceInput" ng-class="{settingsPreferenceInputActive: userData.preferences[8] == 1}" ng-click="togglePreference(8, userData.preferences[8])"></div>
+			</div>
+			<div class="settingsPreference settingsPreferencePadding">tailor ads based on my information
+
+			</div>
+		</div>
+	</div>
+
 
 </div>
 

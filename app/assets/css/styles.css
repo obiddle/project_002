@@ -631,6 +631,195 @@ body {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+.settingsContainer {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  min-width: 750px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+.settingsWrapper {
+  position: relative;
+  width: 575px;
+  margin: auto;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+.settingsTitle {
+  position: relative;
+  font-size: 31px;
+  color: #3f454d;
+  line-height: 31px;
+  margin-top: 46px;
+}
+.settingsSection {
+  position: relative;
+  width: 100%;
+  padding: 25px 0 30px 0;
+  border-bottom: 1px solid #dee1e5;
+  min-height: 200px;
+}
+.settingsSectionTitle {
+  position: relative;
+  line-height: 56px;
+  color: #70767f;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 13px;
+  width: 100%;
+}
+.settingsSectionTitlePadding {
+  padding-bottom: 12px;
+}
+.settingsAvatarImage {
+  position: absolute;
+  z-index: 1;
+  top: 82px;
+  left: 0px;
+  background: no-repeat center;
+  background-size: 100%;
+  height: 85px;
+  width: 85px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.settingsChangeImageButton {
+  position: absolute;
+  z-index: 1;
+  top: 177px;
+  left: 0px;
+  line-height: 25px;
+  width: 85px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #bec3cc;
+  color: #bec3cc;
+  font-size: 12px;
+  text-align: center;
+}
+.settingsField {
+  position: relative;
+  height: 40px;
+  width: 366px;
+  margin: 0 0 20px 135px;
+  padding: 0px 5px 0px 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #bec3cc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 30px;
+  color: #3f454d;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 16px;
+  background: no-repeat left center #ffffff;
+  background-size: 25px;
+  display: block;
+}
+.settingsNameIcon {
+  background-image: url("../images/settings/name_icon.png");
+}
+.settingsNameIcon:focus {
+  background-image: url("../images/settings/name_icon_active.png");
+  outline-width: 0;
+  border: 1px solid #00b286;
+  color: #00b286;
+}
+.settingsEmailIcon {
+  background-image: url("../images/settings/email_icon.png");
+}
+.settingsEmailIcon:focus {
+  background-image: url("../images/settings/email_icon_active.png");
+  outline-width: 0;
+  border: 1px solid #00b286;
+  color: #00b286;
+}
+.settingsPasswordIcon {
+  background-image: url("../images/settings/password_icon.png");
+}
+.settingsPasswordIcon:focus {
+  background-image: url("../images/settings/password_icon_active.png");
+  outline-width: 0;
+  border: 1px solid #00b286;
+  color: #00b286;
+}
+.settingsPreference {
+  position: relative;
+  width: 100%;
+  padding-left: 75px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 27px;
+  color: #70767f;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.settingsPreferencePadding {
+  padding-left: 50px;
+}
+.settingsPreferenceToggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 50px;
+  height: 27px;
+  background: url("../images/settings/toggle_off.png") no-repeat center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.settingsPreferenceToggleActive {
+  background-image: url("../images/settings/toggle_on.png");
+}
+.settingsPreferenceInput {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  z-index: 1;
+  width: 23px;
+  height: 23px;
+  background: no-repeat center;
+  background-size: 15px;
+  cursor: pointer;
+  border: 1px solid #bec3cc;
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  -ms-border-radius: 27px;
+  -o-border-radius: 27px;
+  border-radius: 27px;
+}
+.settingsPreferenceInputActive {
+  background-image: url("../images/settings/green_dot.png");
+}
 .postsContainer {
   position: relative;
   display: none;
