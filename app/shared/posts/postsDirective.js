@@ -9,7 +9,8 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 		    this.init = function(){
 		    	this.postType = "allListView";
 		    	this.postData = postsService.getPostData();	
-		    	this.photoData = postsService.getPhotoData();	
+		    	this.photoData = postsService.getPhotoData();
+		    	this.videoData = postsService.getVideoData();	
 		    }
 		    this.init()
 
@@ -50,13 +51,8 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 			}
 
             $rootScope.$on("update-post-data", function(e) {
-            	this.updatePostData();
+            	this.postData = postsService.getPostData();		
             });
-
-		    this.updatePostData = function(){
-				this.postData = postsService.getPostData();	
-		    	this.photoData = postsService.getPhotoData();	
-		    }
 
         }
     }
@@ -106,6 +102,19 @@ simplySocialApp.directive("postsPhotosTemplate", function() {
         require: '^postsViewNavigator',
         templateUrl: function(){
             return "shared/posts/views/photosGridView.html";  
+        },
+        link: function (scope, element, attrs, postsViewNavigatorCtrl) {
+            scope.postsViewNavigator = postsViewNavigatorCtrl;
+        }
+    };
+});
+
+simplySocialApp.directive("postsVideosTemplate", function() {
+    return {
+        restrict: "AE",
+        require: '^postsViewNavigator',
+        templateUrl: function(){
+            return "shared/posts/views/videosGridView.html";  
         },
         link: function (scope, element, attrs, postsViewNavigatorCtrl) {
             scope.postsViewNavigator = postsViewNavigatorCtrl;

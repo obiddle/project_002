@@ -6,13 +6,19 @@ simplySocialApp.factory('postsService', [ 'userAccountService', '$rootScope', fu
 
     factory.getPostData = function(){
 		var data = dataBlobPosts.allPosts;
-		postData = factory.chunkPostData(data)
+		var postData = factory.chunkPostData(data)
         return postData;
     }
 
     factory.getPhotoData = function(){
 		var data = dataBlobPhotos.allPhotos;
-		postData = factory.chunkPostData(data)
+		var postData = factory.chunkPostData(data)
+        return postData;
+    }
+
+    factory.getVideoData = function(){
+		var data = dataBlobVideos.allVideos;
+		var postData = factory.chunkPostData(data)
         return postData;
     }
 
@@ -285,3 +291,52 @@ var dataBlobPhotos = {"allPhotos": [
        
     }
 ]}
+
+
+var dataBlobVideos = {"allVideos": [
+    {
+        "id": 02,
+        "time" : "25m",      
+        "text" : "My view this morning is simply beautiful... instagram.com/p/mV0PUrHRwQ/",
+        "photo" : 0,
+        "video" : "assets/images/post/dataBlobImages/post_video_07.png",
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Pallavi Gupta",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_07.jpg", 
+	        "id" : 9
+        }
+       
+    },
+    {
+        "id": 06,
+        "time" : "1h",      
+        "text" : "You have to see this bike. It will make your daily commute an absolute joy ride! on.mash.to/1oubyu8",
+        "photo" : 0,
+        "video" : "assets/images/post/dataBlobImages/post_video_06.png",
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Vitor Leal",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_01.jpg", 
+	        "id" : 6
+        }
+       
+    },
+    {
+        "id": 08,
+        "time" : "25m",      
+        "text" : "My beach cruiser. I take it serving daily, check it... instagram.com/p/mV0PUrHRwQ/",
+        "photo" : 0,
+        "video" : "assets/images/post/dataBlobImages/post_video_08.png",
+        "comments" : 0,
+        "user" : {
+	        "user_name": "Meg Robichaud",
+	        "avatar_image": "assets/images/post/dataBlobImages/avatar_image_02.jpg", 
+	        "id" : 11
+        }
+       
+    }
+]}
+
+
+

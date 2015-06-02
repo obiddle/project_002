@@ -17,7 +17,7 @@
 
 	<div class="navBarSettingsContainer" ng-class="{navBarSettingsContainerActive: settingsMenuOpen}" ng-mouseenter="settingsMenuOpen = true" ng-mouseleave="settingsMenuOpen = false">
 		<div class="navBarSettingsLink">Profile
-			<div class="touchEffectLight"></div>
+			<div class="touchEffectLight" ng-click="changeView('/profile')"></div>
 		</div>
 		<div class="navBarSettingsLink">Followers
 			<div class="touchEffectLight"></div>

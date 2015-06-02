@@ -8,6 +8,10 @@ simplySocialApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'core/settings/settingsView.html',
             controller: 'settingsController'
         })
+        .when('/profile', {
+            templateUrl: 'core/profile/profileView.html',
+            controller: 'profileController'
+        })
         .otherwise({
             redirectTo: '/home'
         });
