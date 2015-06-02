@@ -13,10 +13,6 @@ simplySocialApp.directive('postsViewNavigator', [function () {
 		    }
 		    this.init()
 
-		    this.updatePostData = function(){
-				this.postData = postsService.updatePostData();
-		    }
-
 		    this.changePostsView = function(type){
 				this.postType = type;
 		    }
@@ -56,6 +52,11 @@ simplySocialApp.directive('postsViewNavigator', [function () {
             $rootScope.$on("update-post-data", function(e) {
             	this.updatePostData();
             });
+
+		    this.updatePostData = function(){
+				this.postData = postsService.getPostData();	
+		    	this.photoData = postsService.getPhotoData();	
+		    }
 
         }
     }

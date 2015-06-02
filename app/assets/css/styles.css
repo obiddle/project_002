@@ -122,6 +122,11 @@ body {
   -ms-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
 .touchEffectGreen:hover {
   background-color: rgba(0, 178, 134, 0.2);
@@ -501,6 +506,27 @@ body {
 .homeSendMessageField::-webkit-input-placeholder {
   /* WebKit browsers */
   color: rgba(255, 255, 255, 0.5);
+}
+.homePostButton {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+  width: 75px;
+  line-height: 35px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 26px;
+  visibility: hidden;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.homePostButtonActive {
+  visibility: visible;
 }
 .homeAddPhotoButton {
   position: absolute;
