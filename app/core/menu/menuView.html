@@ -2,7 +2,7 @@
 
 	<div class="navBar">
 		<div class="navBarTitle navBarTitleMenu">MENU</div>
-		<div class="navBarMenuButton">
+		<div class="navBarExitButton">
 			<div class="touchEffect" ng-click="changeView('menu')" touch-effect></div>
 		</div>
 	</div>
@@ -13,12 +13,20 @@
 		<div class="menuButton">Beginner
 			<div class="touchEffectDark" ng-click="changeView('beginner')" touch-effect></div>
 		</div>
-		<div class="menuButton">Intermediate</div>
-		<div class="menuButton">Advanced</div>
-		<div class="menuButton menuButtonNoBorder">Expert</div>
+		<div class="menuButton">Intermediate
+			<div class="touchEffectDark" ng-click="changeView('beginner')" touch-effect></div>
+		</div>
+		<div class="menuButton">Advanced
+			<div class="touchEffectDark" ng-click="changeView('beginner')" touch-effect></div>
+		</div>
+		<div class="menuButton menuButtonNoBorder">Expert
+			<div class="touchEffectDark" ng-click="changeView('beginner')" touch-effect></div>
+		</div>
 
 		<div class="menuTitle">Other</div>
-		<div class="menuButton menuButtonNoBorder" ng-click="changeView('intro')">Show Startup Screen</div>
+		<div class="menuButton menuButtonNoBorder">Show Startup Screen
+			<div class="touchEffectDark" ng-click="changeView('intro')" touch-effect></div>
+		</div>
 
 	</div>
 
