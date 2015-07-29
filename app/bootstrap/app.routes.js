@@ -8,10 +8,10 @@ LessonsApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'core/lessons/lessonsView.html',
             controller: 'lessonsController'
         })
-        // .when('/beginner', {
-        //     templateUrl: 'core/beginner/beginnerView.html',
-        //     controller: 'beginnerController'
-        // })
+        .when('/beginner', {
+            templateUrl: 'core/beginner/beginnerView.html',
+            controller: 'beginnerController'
+        })
         .otherwise({
             redirectTo: '/intro'
         });

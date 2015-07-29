@@ -1,6 +1,6 @@
 
 
-LessonsApp.controller('lessonsController', ['$scope', function ($scope){
+LessonsApp.controller('lessonsController', ['$scope', '$location', function ($scope, $location){
     
 
     function init(){
