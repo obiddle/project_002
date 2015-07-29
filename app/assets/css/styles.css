@@ -98,7 +98,30 @@ body {
   border-radius: 5px;
 }
 .touchEffectActive {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.touchEffectDark {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.touchEffectDarkActive {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .introContainer {
   position: absolute;
@@ -256,6 +279,9 @@ body {
   height: 60px;
   background: url("../images/global/menu_icon.png") no-repeat center;
   background-size: 26px;
+}
+.navBarTitleMenu {
+  width: 120px;
 }
 .menuContainer {
   position: absolute;

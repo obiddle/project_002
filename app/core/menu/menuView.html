@@ -1,7 +1,7 @@
 <div class="menuContainer">
 
 	<div class="navBar">
-		<div class="navBarTitle">MENU</div>
+		<div class="navBarTitle navBarTitleMenu">MENU</div>
 		<div class="navBarMenuButton">
 			<div class="touchEffect" ng-click="changeView('menu')" touch-effect></div>
 		</div>
@@ -9,7 +9,10 @@
 
 	<div class="menuWrapper" scroller>
 		<div class="menuTitle">Skill Level</div>
-		<div class="menuButton">Beginner</div>
+
+		<div class="menuButton">Beginner
+			<div class="touchEffectDark" ng-click="changeView('beginner')" touch-effect></div>
+		</div>
 		<div class="menuButton">Intermediate</div>
 		<div class="menuButton">Advanced</div>
 		<div class="menuButton menuButtonNoBorder">Expert</div>
