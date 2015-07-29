@@ -1,6 +1,6 @@
 
 
-LessonsApp.controller('introController', ['$scope', '$location', function ($scope, $location){
+LessonsApp.controller('lessonsController', ['$scope', function ($scope){
     
 
     function init(){
@@ -10,7 +10,7 @@ LessonsApp.controller('introController', ['$scope', '$location', function ($scop
 
     $scope.changeView = function (view) {
         //navigationService.setAnimationType("Next", "slideIn");
-        $location.path("/" + view);
+        $location.path(view);
     };
 
 
