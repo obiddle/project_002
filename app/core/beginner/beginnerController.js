@@ -4,7 +4,7 @@ LessonsApp.controller('beginnerController', ['$scope', '$location', function ($s
     
 
     function init(){
-
+        $scope.showModal = false;
     }
     init()
 
@@ -12,6 +12,14 @@ LessonsApp.controller('beginnerController', ['$scope', '$location', function ($s
         //navigationService.setAnimationType("Next", "slideIn");
         $location.path(view);
     };
+
+    $scope.openModal = function (){
+        $scope.showModal = true;
+    }
+
+    $scope.closeModal = function (){
+        $scope.showModal = false;
+    }
 
 
 

@@ -21,7 +21,7 @@
 
 		<div class="beginnerItemWrapper">
 			<div class="beginnerItem beginnerPartTwoImage">
-				<div class="touchEffect" ng-click="" touch-effect></div>
+				<div class="touchEffect" ng-click="openModal()" touch-effect></div>
 			</div>
 			<div class="beginnerItemText inActiveText">
 				Part 2<br>
@@ -32,7 +32,7 @@
 
 		<div class="beginnerItemWrapper">
 			<div class="beginnerItem beginnerPartThreeImage">
-				<div class="touchEffect" ng-click="" touch-effect></div>
+				<div class="touchEffect" ng-click="openModal()" touch-effect></div>
 			</div>
 			<div class="beginnerItemText inActiveText">
 				Part 3<br>
@@ -42,6 +42,16 @@
 		</div>
 
 	</div>
+
+	<div class="unlockModal" ng-show="showModal">
+		<div class="modalWrapper">
+			<div class="modalText">Complete <span class="redText">part 1</span> to unlock.</div>
+			<div class="modalButton">OK
+				<div class="touchEffect" ng-click="closeModal()" touch-effect></div>
+			</div>
+		</div>
+	<div>
+
 
 
 </div>
