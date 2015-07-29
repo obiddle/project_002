@@ -277,7 +277,7 @@ body {
 .menuWrapper {
   position: relative;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 .menuTitle {
   position: relative;
@@ -291,7 +291,7 @@ body {
   position: relative;
   color: #444444;
   border-bottom: 1px solid #e7e7e7;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 50px;
   padding-left: 20px;
   font-family: Brown-Bold;
