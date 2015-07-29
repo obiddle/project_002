@@ -277,23 +277,23 @@ body {
 .menuWrapper {
   position: relative;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .menuTitle {
   position: relative;
-  font-size: 12px;
+  font-size: 14px;
   color: #9a9a9a;
   line-height: 30px;
-  padding-left: 15px;
+  padding-left: 10px;
   font-family: Brown-Light;
 }
 .menuButton {
   position: relative;
   color: #444444;
   border-bottom: 1px solid #e7e7e7;
-  font-size: 18px;
-  line-height: 40px;
-  padding-left: 40px;
+  font-size: 22px;
+  line-height: 50px;
+  padding-left: 20px;
   font-family: Brown-Bold;
 }
 .menuButtonNoBorder {
