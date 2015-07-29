@@ -445,7 +445,7 @@ body {
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   padding-top: 70px;
-  background: url("../images/lessons/lessons_bg.jpg") no-repeat center;
+  background: url("../images/beginner/coming_soon.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -459,11 +459,11 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  width: 200px;
+  width: 300px;
   height: 40px;
   line-height: 40px;
   font-family: Brown-Bold;
   text-align: center;
-  font-size: 18px;
+  font-size: 30px;
   color: rgba(255, 255, 255, 0.7);
 }
