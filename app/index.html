@@ -21,17 +21,14 @@
 
 	<body>
 
-		<div id="appContainer" ng-app="simplySocialApp">
-			<nav-bar-template></nav-bar-template>
+		<div id="appContainer" ng-app="LessonsApp">
 			<div id-"appViews" ng-view></div>
-			<send-message-template></send-message-template>
 		</div>
 
   		
   		<!-- ANGULAR -->
 		<script src="assets/bower_components/angular/angular.js"></script>
 		<script src="assets/bower_components/angular-route/angular-route.js"></script>
-		<script src="assets/jquery/masonry.pkgd.min.js"></script>
 
 
 		<!-- BOOTSTRAP -->
@@ -41,39 +38,10 @@
 
 		<!-- CORE -->
 
-			<!-- NAV BAR -->
-			<script src="core/navBar/navBarController.js"></script>
-			<script src="core/navBar/navBarDirective.js"></script>
 
 			<!-- HOME -->
-			<script src="core/home/homeController.js"></script>
+			<script src="core/intro/introController.js"></script>
 
-			<!-- MESSAGE -->
-			<script src="core/message/messageController.js"></script>
-			<script src="core/message/messageDirective.js"></script>
-			<script src="core/message/messageService.js"></script>
-
-			<!-- SETTINGS -->  
-			<script src="core/settings/settingsController.js"></script>
-
-			<!-- PROFILE -->
-			<script src="core/profile/profileController.js"></script>
-
-
-		<!-- SHARED -->
-
-			<!-- POSTS -->
-			<script src="shared/posts/postsService.js"></script>
-			<script src="shared/posts/postsDirective.js"></script>
-
-			<!-- USER ACCOUNT -->
-			<script src="shared/userAccount/userAccountService.js"></script>
-
-			<!-- HTTP -->
-			<script src="shared/http/httpService.js"></script>
-
-			<!-- HELPERS -->
-			<script src="shared/helpers/helperService.js"></script>
 
 	</body>
 </html>

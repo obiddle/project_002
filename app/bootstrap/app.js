@@ -1,6 +1,6 @@
 'use strict';
 
-var simplySocialApp = angular.module('simplySocialApp', [
+var LessonsApp = angular.module('LessonsApp', [
 	'ngRoute'
 ])
 
