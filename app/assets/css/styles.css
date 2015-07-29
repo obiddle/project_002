@@ -445,7 +445,7 @@ body {
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   padding-top: 70px;
-  background: url("../images/beginner/coming_soon.jpg") no-repeat center;
+  background: url("../images/lessons/lessons_bg.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
