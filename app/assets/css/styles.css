@@ -184,3 +184,45 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.lessonsWrapper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 280px;
+}
+.lessonsText {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  line-height: 23px;
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: Brown-Light;
+}
+.lessonsButton {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 64px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #d6c7be;
+  color: #896162;
+  font-family: Brown-Bold;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.lessonsButtonHighLight {
+  background-color: #fff;
+  color: #946e59;
+}
