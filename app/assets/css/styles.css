@@ -377,4 +377,30 @@ body {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
+  padding-top: 70px;
+}
+.beginnerItemWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.beginnerItem {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background: url("../images/beginner/part_one.jpg") no-repeat center;
+  background-size: 100%;
+}
+.beginnerItemText {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 70px;
+  height: 80px;
+  color: #946e59;
+  text-align: center;
+  font-size: 14px;
+  font-family: Brown-Light;
+  line-height: 20px;
 }
