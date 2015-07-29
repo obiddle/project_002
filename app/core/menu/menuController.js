@@ -1,6 +1,6 @@
 
 
-LessonsApp.controller('menuController', ['$scope', '$location', function ($scope, $location){
+LessonsApp.controller('menuController', ['$scope', '$location', '$rootScope', function ($scope, $location, $rootScope){
     
 
     function init(){
@@ -13,6 +13,9 @@ LessonsApp.controller('menuController', ['$scope', '$location', function ($scope
         $location.path(view);
     };
 
+    $scope.back = function () {
+        $rootScope.back()
+    }
 
 
 
