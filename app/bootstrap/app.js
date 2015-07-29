@@ -1,7 +1,8 @@
 'use strict';
 
 var LessonsApp = angular.module('LessonsApp', [
-	'ngRoute'
+	'ngRoute',
+	'ngTouch'
 ])
 
 
