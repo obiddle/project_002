@@ -4,6 +4,11 @@
 
 body {position:absolute;z-index: 1; height: 100%;width: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-touch-callout: none;-webkit-user-select: none;margin:0;padding:0;overflow-x: hidden;}
 
+.imagePreLoader {background-image: 
+  url(../images/intro/intro_bg.jpg),
+  url(../images/lessons/lessons_bg.jpg)
+}
+
 #appContainer {position: absolute; z-index: 1; top: 0px;left: 0px;height: 100%;width: 100%;overflow: hidden;}
 
 #appViews {position: absolute; z-index: 1; top:0;left:0; height: 100%;width: 100%; .border-box; background-color: #fff; .translate3d(0,0,0);}
@@ -13,10 +18,11 @@ body {position:absolute;z-index: 1; height: 100%;width: 100%; -webkit-tap-highli
 
 
 
-// HOME
+// INTRO
 @import "core/intro/intro.less";
 
-
+// LESSONS
+@import "core/lessons/lessons.less";
 
 
 

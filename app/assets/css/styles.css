@@ -46,6 +46,9 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.imagePreLoader {
+  background-image: url(../images/intro/intro_bg.jpg), url(../images/lessons/lessons_bg.jpg);
+}
 #appContainer {
   position: absolute;
   z-index: 1;
@@ -159,4 +162,25 @@ body {
   font-family: Brown-Bold;
   text-align: center;
   font-size: 16px;
+}
+.lessonsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  background: url("../images/lessons/lessons_bg.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
