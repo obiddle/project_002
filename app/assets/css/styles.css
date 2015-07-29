@@ -445,11 +445,7 @@ body {
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   padding-top: 70px;
-  background: url("../images/beginner/coming_soon.jpg") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #e7e7e7;
 }
 .comingSoonText {
   position: absolute;
@@ -465,5 +461,5 @@ body {
   font-family: Brown-Bold;
   text-align: center;
   font-size: 30px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #b2b2b2;
 }
