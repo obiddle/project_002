@@ -308,6 +308,16 @@ body {
   background: url("../images/global/exit_icon.png") no-repeat center;
   background-size: 26px;
 }
+.navBarBackButton {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../images/global/back_arrow_icon.png") no-repeat center;
+  background-size: 30px;
+}
 .navBarTitleMenu {
   width: 120px;
 }

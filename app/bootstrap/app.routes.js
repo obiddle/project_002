@@ -16,6 +16,10 @@ LessonsApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'core/beginner/beginnerView.html',
             controller: 'beginnerController'
         })
+        .when('/partOne', {
+            templateUrl: 'core/partOne/partOneView.html',
+            controller: 'partOneController'
+        })
         .otherwise({
             redirectTo: '/intro'
         });
