@@ -390,8 +390,18 @@ body {
   width: 200px;
   height: 200px;
   margin: auto;
-  background: url("../images/beginner/part_one.jpg") no-repeat center;
+  background: no-repeat center;
   background-size: 100%;
+  overflow: hidden;
+}
+.beginnerPartOneImage {
+  background-image: url("../images/beginner/part_one.jpg");
+}
+.beginnerPartTwoImage {
+  background-image: url("../images/beginner/part_two.jpg");
+}
+.beginnerPartThreeImage {
+  background-image: url("../images/beginner/part_three.jpg");
 }
 .beginnerItemText {
   position: absolute;
@@ -405,4 +415,7 @@ body {
   font-size: 18px;
   font-family: Brown-Light;
   line-height: 20px;
+}
+.inActiveText {
+  color: #c9b6ac;
 }
