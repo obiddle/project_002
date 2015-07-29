@@ -4,6 +4,10 @@ LessonsApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'core/intro/introView.html',
             controller: 'introController'
         })
+        .when('/menu', {
+            templateUrl: 'core/menu/menuView.html',
+            controller: 'menuController'
+        })
         .when('/lessons', {
             templateUrl: 'core/lessons/lessonsView.html',
             controller: 'lessonsController'

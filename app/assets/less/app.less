@@ -5,8 +5,8 @@
 body {position:absolute;z-index: 1; height: 100%;width: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-touch-callout: none;-webkit-user-select: none;margin:0;padding:0;overflow-x: hidden;}
 
 .imagePreLoader {background-image: 
-  url(../images/intro/intro_bg.jpg),
-  url(../images/lessons/lessons_bg.jpg)
+  url(../images/intro/intro_bg.jpg) -9999px -9999px,
+  url(../images/lessons/lessons_bg.jpg -9999px -9999px)
 }
 
 #appContainer {position: absolute; z-index: 1; top: 0px;left: 0px;height: 100%;width: 100%;overflow: hidden;}
@@ -26,6 +26,9 @@ body {position:absolute;z-index: 1; height: 100%;width: 100%; -webkit-tap-highli
 
 // NAVBAR
 @import "shared/navBar/navBar.less";
+
+// MENU
+@import "core/menu/menu.less";
 
 // BEGINNER
 @import "core/beginner/beginner.less";
