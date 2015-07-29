@@ -1,6 +1,6 @@
 
 
-LessonsApp.controller('partOneController', ['$scope', '$rootScope', function ($scope, $rootScope){
+LessonsApp.controller('partOneController', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location){
     
 
     function init(){
